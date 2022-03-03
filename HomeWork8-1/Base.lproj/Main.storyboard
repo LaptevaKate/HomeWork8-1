@@ -58,7 +58,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.99013946073827364" blue="0.6813175760917044" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="hih-dO-ntc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="F2W-ss-EVj"/>
                             <constraint firstItem="UrN-cU-yaK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giX-sl-srb"/>
@@ -80,7 +80,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Zff-7B-KHv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.65429393711796968" blue="0.92205625802470081" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dXU-a5-Q58" appends="YES" id="s4e-iG-aMa"/>
+                            <outletCollection property="gestureRecognizers" destination="26X-GI-F7l" appends="YES" id="QSW-ic-Bl0"/>
+                            <outletCollection property="gestureRecognizers" destination="wQi-oj-4qR" appends="YES" id="xt6-wS-yMi"/>
+                            <outletCollection property="gestureRecognizers" destination="2yy-P1-F5r" appends="YES" id="gBn-SI-rgQ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Circle Game" id="063-V6-GGS">
                         <barButtonItem key="rightBarButtonItem" title="Close" id="264-mS-NSW">
@@ -91,6 +98,26 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdX-Q9-CcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="dXU-a5-Q58">
+                    <connections>
+                        <action selector="swipe:" destination="2cv-3B-cWz" id="pgC-rE-4k3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="26X-GI-F7l">
+                    <connections>
+                        <action selector="swipe:" destination="2cv-3B-cWz" id="7Jn-ad-rsA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="wQi-oj-4qR">
+                    <connections>
+                        <action selector="swipe:" destination="2cv-3B-cWz" id="WbZ-gJ-4Ww"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="2yy-P1-F5r">
+                    <connections>
+                        <action selector="swipe:" destination="2cv-3B-cWz" id="V3Z-uP-HD4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1141" y="433"/>
         </scene>
@@ -102,7 +129,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Vqx-6t-sEb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.60358096352340029" blue="0.60643349179638473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="phn-24-Ewn" appends="YES" id="phT-n3-caA"/>
@@ -129,9 +156,6 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

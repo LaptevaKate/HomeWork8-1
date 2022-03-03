@@ -23,6 +23,7 @@ class FirstTaskViewController: UIViewController {
         movingView.backgroundColor = .purple
         movingView.frame = CGRect(x: location.x - 30, y: location.y - 30, width: 60, height: 60)
         movingView.layer.cornerRadius = 30
+        movingView.layer.masksToBounds = true
         
         for element in 0..<views.count {
             if views[element].frame.contains(location){
@@ -34,8 +35,6 @@ class FirstTaskViewController: UIViewController {
         views.append(movingView)
         view.addSubview(movingView)
     }
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
