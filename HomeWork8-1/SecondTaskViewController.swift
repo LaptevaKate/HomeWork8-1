@@ -9,12 +9,18 @@ import UIKit
 
 class SecondTaskViewController: UIViewController {
   
+    //MARK: - Properties
+    
     private let sizeConst: CGFloat = 40
     var label: UILabel!
     
-    @IBAction func close(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+    //MARK: - ViewDidLoad
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initLabel()
     }
+    //MARK: - Methods
     
     func initLabel() {
         label = UILabel()
@@ -25,6 +31,12 @@ class SecondTaskViewController: UIViewController {
         label.center.x = view.center.x
         label.center.y = view.center.y
         self.view.addSubview(label)
+    }
+  
+    //MARK: - IBActions
+    
+    @IBAction func close(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
@@ -41,13 +53,5 @@ class SecondTaskViewController: UIViewController {
             default:
             break
         }
-        
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initLabel()
-    }
-    
-
 }

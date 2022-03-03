@@ -9,12 +9,21 @@ import UIKit
 
 class FirstTaskViewController: UIViewController {
 
+    //MARK: - Properties
+    
     var views:[UIView] = []
+    
+    //MARK: - ViewDidLoad
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    //MARK: - IBActions
     
     @IBAction func close(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
-    
     
     @IBAction func tap(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: view)
@@ -34,10 +43,5 @@ class FirstTaskViewController: UIViewController {
         }
         views.append(movingView)
         view.addSubview(movingView)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
     }
 }
